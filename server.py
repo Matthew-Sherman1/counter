@@ -1,4 +1,7 @@
 
+
+
+
 from flask import Flask, render_template, request, redirect, session
 app = Flask(__name__)
 app.secret_key = "counter keyyyyyyyy"
@@ -15,6 +18,7 @@ def addToCounter():
     return redirect('/')
 @app.route('/reset')
 def reset():
+    
     session['count'] = 0
     return redirect('/')
 if __name__=="__main__":   
